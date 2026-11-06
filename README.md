@@ -6,9 +6,27 @@
 
 ![演示:提问 must 的否定,回答带出处与跳转链接](assets/demo.gif)
 
+## 安装
+
+**Claude Code**
+
+```bash
+git clone https://github.com/liu-1liu/xiaoyan-junior-english.git ~/.claude/skills/xiaoyan-junior-english
+```
+
+新开一个会话即可使用,想确保触发可以点名「用 xiaoyan-junior-english」。
+
+**OpenAI Codex**(未经实测,路径依据 [Codex 官方文档](https://developers.openai.com/codex/skills))
+
+```bash
+git clone https://github.com/liu-1liu/xiaoyan-junior-english.git ~/.agents/skills/xiaoyan-junior-english
+```
+
+在 Codex 里输入 `$` 或 `/skills` 选用。Codex 自带的 skill-installer 在部分版本默认装到 `~/.codex/skills`,手动安装请用上面的路径。
+
 ## 为什么做这个
 
-辅导孩子英语时我发现,语法对很多家长来说也讲不清;老师备课同样耗时:要找准知识点、配例句、预判学生的易错处。这个 skill 把一整套初中语法课整理成可检索的知识点索引,让 AI 按老师的讲法讲清楚,并且每个结论都标出课上的出处,可以点开核对。
+总会有烦恼教导孩子英语的时候,对于复杂的语法梳理清楚就需要花掉大量时间;老师备课同样耗时:要找准知识点、配例句、预判学生的易错处。这个 skill 把一整套初中语法课整理成可检索的知识点索引,让 AI 按老师的讲法讲清楚,并且每个结论都标出课上的出处,可以点开核对。
 
 ## 怎么用
 
@@ -56,24 +74,6 @@
 
 主谓一致(P47)老师让学生自学,P58 只有习题说明。
 
-## 安装
-
-**Claude Code**
-
-```bash
-git clone https://github.com/liu-1liu/xiaoyan-junior-english.git ~/.claude/skills/xiaoyan-junior-english
-```
-
-新开一个会话即可使用,想确保触发可以点名「用 xiaoyan-junior-english」。
-
-**OpenAI Codex**(未经实测,路径依据 [Codex 官方文档](https://developers.openai.com/codex/skills))
-
-```bash
-git clone https://github.com/liu-1liu/xiaoyan-junior-english.git ~/.agents/skills/xiaoyan-junior-english
-```
-
-在 Codex 里输入 `$` 或 `/skills` 选用。Codex 自带的 skill-installer 在部分版本默认装到 `~/.codex/skills`,手动安装请用上面的路径。
-
 ## 工作原理
 
 回答时先查 `references/course-index.md` 定位知识点编号,再只打开对应的分集文件,最后按编号给出出处。
@@ -89,7 +89,7 @@ examples/                回答示例
 
 ## 常见问题
 
-**准确吗?** 索引由本地语音转写整理,转写含识别错误,各分集文件末尾的"转写存疑"列出了不确定处。时间戳取转写行的起点,可能差几十秒。P21 之后的条目未逐条人工核对。
+**准确吗?** 索引由本地语音转写整理,转写含识别错误,各分集文件末尾的"转写存疑"列出了不确定处。时间戳取转写行的起点,可能差几十秒。
 
 **为什么有些问题说"这门课没讲到"?** 比如虚拟语气,课上只在例句里点到一次。这时会给一个简短的通用解答,并明确标注不是老师的讲法。
 
@@ -98,8 +98,6 @@ examples/                回答示例
 ## 来源说明
 
 - 课程:B 站合集「【全58集】刘晓燕初中英语」(`BV16juq6bEFS`,UP 主「成龙学长」)。P02–P20 与另一合集 `BV1hWhG6PECd`(UP 主「余师爱学习」)的 P01–P19 内容一致。
-- 讲师视频中自称"刘晓燕"。
-- 索引由本地语音转写(Whisper)整理,"讲法"是转述,不是逐字引用;本仓库不包含视频、音频或完整逐字稿。
 
 ## 版权与撤下
 
