@@ -61,7 +61,7 @@
 **Claude Code**
 
 ```bash
-git clone <本仓库地址> ~/.claude/skills/xiaoyan-junior-english
+git clone https://github.com/liu-1liu/xiaoyan-junior-english.git ~/.claude/skills/xiaoyan-junior-english
 ```
 
 新开一个会话即可使用,想确保触发可以点名「用 xiaoyan-junior-english」。
@@ -69,7 +69,7 @@ git clone <本仓库地址> ~/.claude/skills/xiaoyan-junior-english
 **OpenAI Codex**(未经实测,路径依据 [Codex 官方文档](https://developers.openai.com/codex/skills))
 
 ```bash
-git clone <本仓库地址> ~/.agents/skills/xiaoyan-junior-english
+git clone https://github.com/liu-1liu/xiaoyan-junior-english.git ~/.agents/skills/xiaoyan-junior-english
 ```
 
 在 Codex 里输入 `$` 或 `/skills` 选用。Codex 自带的 skill-installer 在部分版本默认装到 `~/.codex/skills`,手动安装请用上面的路径。
